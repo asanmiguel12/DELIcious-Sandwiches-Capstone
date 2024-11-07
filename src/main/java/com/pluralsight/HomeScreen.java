@@ -6,7 +6,7 @@ public class HomeScreen {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Welcome To DELIcious Sandwiches" + "\n" +
-                "What Would You Like To Do Today?" +
+                "What Would You Like To Do Today?" + "\n" +
                 "1) Place A New Order " + "\n" +
                 "2) Exit" );
         int choice = scanner.nextInt();
@@ -26,6 +26,7 @@ public class HomeScreen {
     }
 
     public static void exit(){
-        System.out.println("We'll Always Be Here Whenever You Get Hungry");
+        System.out.println("We'll Always Be Here Whenever You Get Hungry" + "\n" +
+                "Come Back Again Soon!");
     }
 }

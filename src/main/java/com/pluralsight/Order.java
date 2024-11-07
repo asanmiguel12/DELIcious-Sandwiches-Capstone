@@ -13,9 +13,12 @@ public class Order {
                 "0) Cancel Order");
 
         int choice = scanner.nextInt();
+        Sandwich sandwich = new Sandwich();
 
         switch (choice) {
             case 1:
+                sandwich.getSize();
+            case 2:
 
 
         }
