@@ -23,7 +23,6 @@ public class HomeScreen {
                 System.out.println("Please Input A Correct Choice");
 
         }
-
     }
 
     public static void exit(){
