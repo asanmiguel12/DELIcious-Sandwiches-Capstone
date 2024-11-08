@@ -3,8 +3,14 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class Sandwich {
+    private String breadSize;
+    private String breadType;
+    private String toppings;
+    private String sauces;
+
     static Scanner scanner = new Scanner(System.in);
-    public String getSize() {
+
+    public String getBreadSize() {
 
         System.out.println("~SANDWICH~" + "\n" +
                 "What size sandwich would you like" + "\n" +
@@ -21,6 +27,7 @@ public class Sandwich {
         switch (choice) {
             case 1:
                 System.out.println("Sandwich Size: 4 Inches");
+                getToppingsAndSauce();
                 return size1;
             case 2:
                 System.out.println("Sandwich Size: 8 Inches");
@@ -32,6 +39,11 @@ public class Sandwich {
                 System.out.println("You Did Not Select A Size" +
                         "Please Input The Number Of The Size Sandwich You Would Like");
         }
-      return null;
+        return null;
+    }
+
+    public String getToppingsAndSauce(){
+        ToppingsAndSauce toppingsAndSauce = new ToppingsAndSauce();
+        return toppingsAndSauce.getToppings();
     }
 }
