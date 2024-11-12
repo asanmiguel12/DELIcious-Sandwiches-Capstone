@@ -33,22 +33,18 @@ public class Meat implements PremiumToppings{
     }
 
     Scanner scanner = new Scanner(System.in);
-    public String selectMeat() {
+    public String getMeat() {
         System.out.println("Please Enter The Type Of Meat You Want:" + "\n" +
                 "\"Steak\", \"Ham\", \"Salami\", \"Roast Beef\", \"Chicken\", \"Bacon\"");
 
         String meatChoice = scanner.nextLine();
+        int meatCount = 0;
 
         for (String meatName : meats) {
             if (meatChoice.equalsIgnoreCase(meatName)) {
-                System.out.println("Meat: " + meatChoice);
-                ToppingsAndSauce toppingsAndSauce = new ToppingsAndSauce();
-                toppingsAndSauce.getToppings();
-                return meatChoice;
-            } else if (meatChoice != meatName) {
-                System.out.println("Not Found Please Try Again");
-                selectMeat();
-                break;
+                meatCount++;
+                System.out.println("Meat: " + meatChoice + " " + "x" + meatCount);
+                return "Meat: " + meatChoice + " " + "x" + meatCount;
             }
 
             }

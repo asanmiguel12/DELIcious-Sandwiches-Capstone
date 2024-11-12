@@ -61,10 +61,12 @@ public class Order {
 
         int choice = scanner.nextInt();
         Sandwich sandwich = new Sandwich();
+        Toppings toppings = new Toppings();
 
         switch (choice) {
             case 1:
                 sandwich.getBreadSize();
+                toppings.getToppings();
             case 2:
 
 
