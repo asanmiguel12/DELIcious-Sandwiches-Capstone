@@ -10,7 +10,7 @@ public class Toppings {
     static List<String> toppingsList = new ArrayList<>();
 
     Scanner scanner = new Scanner(System.in);
-    public List<String> getToppings() {
+    public String getToppings() {
         System.out.println("Please Choose Your Toppings " + "\n" +
                 "1) Meat" + "\n" +
                 "2) Cheese" + "\n" +
@@ -25,23 +25,23 @@ public class Toppings {
                 Meat meat = new Meat();
                 toppingsList.add(meat.getMeat());
                 getToppings();
-
+                break;
             case 2:
                 Cheese cheese = new Cheese();
                 toppingsList.add(cheese.getCheese());
                 getToppings();
-
+                break;
             case 3:
                 toppingsList.add(selectVeggies());
                 getToppings();
-
             case 4:
                 Sauce sauce = new Sauce();
                 toppingsList.add(sauce.getSauce());
                 getToppings();
-
+                break;
             case 5:
                 finished();
+                break;
         }
         return null;
     }
@@ -68,6 +68,7 @@ public class Toppings {
     }
 
     public List<String> finished(){
+        System.out.println(toppingsList);
         return toppingsList;
     }
 }

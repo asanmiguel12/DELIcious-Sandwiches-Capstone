@@ -62,12 +62,27 @@ public class Order {
         int choice = scanner.nextInt();
         Sandwich sandwich = new Sandwich();
         Toppings toppings = new Toppings();
+        Drink drink = new Drink();
+        Chips chips = new Chips();
+        Checkout checkout = new Checkout();
 
         switch (choice) {
             case 1:
                 sandwich.getBreadSize();
                 toppings.getToppings();
+                break;
             case 2:
+                drink.getDrink();
+                break;
+            case 3:
+                chips.getChips();
+                break;
+            case 4:
+                checkout.checkout();
+                break;
+            default:
+                System.out.println("Invalid Input " +
+                        "Please Try Again");
 
 
         }

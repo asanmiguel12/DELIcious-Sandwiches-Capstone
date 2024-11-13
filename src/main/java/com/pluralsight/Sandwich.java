@@ -1,11 +1,13 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Sandwich {
     private String breadSize;
     private String breadType;
+    static List<String> sandwich = new ArrayList<>();
     private String toppings;
     private Sauce sauces;
 
@@ -39,20 +41,20 @@ public class Sandwich {
         switch (choice) {
             case 1:
                 System.out.println("Sandwich Size: 4 Inches");
-                getBreadType();
-                toppings.getToppings();
+                sandwich.add(getBreadType());
+                sandwich.add(toppings.getToppings());
                 size1 = breadSize;
                 return size1;
             case 2:
                 System.out.println("Sandwich Size: 8 Inches");
-                getBreadType();
-                toppings.getToppings();
+                sandwich.add(getBreadType());
+                sandwich.add(toppings.getToppings());
                 size2 = breadSize;
                 return size2;
             case 3:
                 System.out.println("Sandwich Size: 8 Inches");
-                getBreadType();
-                toppings.getToppings();
+                sandwich.add(getBreadType());
+                sandwich.add(toppings.getToppings());
                 size3 = breadSize;
                 return size3;
             default:

@@ -44,7 +44,7 @@ public class Cheese implements PremiumToppings{
             if (cheeseChoice.equalsIgnoreCase(cheeseName)) {
                 cheeseCount++;
                 System.out.println("Cheese: " + cheeseChoice + " " + "x" + cheeseCount);
-                return cheeseChoice;
+                return "Cheese: " + cheeseChoice + " " + "x" + cheeseCount;
             }
         }
         return null;
