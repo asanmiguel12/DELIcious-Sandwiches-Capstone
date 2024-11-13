@@ -24,51 +24,55 @@ public class Toppings {
             case 1:
                 Meat meat = new Meat();
                 toppingsList.add(meat.getMeat());
+                System.out.println("Your Sandwich: " + toppingsList);
                 getToppings();
                 break;
             case 2:
                 Cheese cheese = new Cheese();
                 toppingsList.add(cheese.getCheese());
+                System.out.println("Your Sandwich: " + toppingsList);
                 getToppings();
                 break;
             case 3:
                 toppingsList.add(selectVeggies());
+                System.out.println("Your Sandwich: " + toppingsList);
                 getToppings();
             case 4:
                 Sauce sauce = new Sauce();
                 toppingsList.add(sauce.getSauce());
+                System.out.println("Your Sandwich: " + toppingsList);
                 getToppings();
                 break;
             case 5:
+                Order order = new Order();
                 finished();
+                order.orderMenu();
                 break;
         }
         return null;
     }
-
+    Scanner scanner1 = new Scanner(System.in);
     public String selectVeggies() {
         List<String> veggies = List.of("Lettuce", "Onions", "Tomatoes", "Jalapenos", "Cucumbers",
                 "Pickles", "Guacamole", "Mushrooms");
         System.out.println("Please Enter The Type Of Cheese You Want:" + "\n" +
                 "\"Lettuce\", \"Onions\", \"Tomatoes\", \"Jalapenos\"");
 
-        String veggiesChoice = scanner.nextLine();
+        String veggiesChoice = scanner1.nextLine();
         int veggiesCount = 0;
 
         for (String cheeseName : veggies) {
             if (veggiesChoice.equalsIgnoreCase(cheeseName)) {
-                System.out.println("Veggies: " + veggiesChoice);
                 veggiesCount++;
+                System.out.println("Veggies: " + veggiesChoice + " " + "x" + veggiesCount);
                 return "Veggies: " + veggiesChoice + " " + "x" + veggiesCount;
             }
-
         }
-
         return null;
     }
 
     public List<String> finished(){
-        System.out.println(toppingsList);
+        System.out.println("Your Sandwich: " + toppingsList);
         return toppingsList;
     }
 }

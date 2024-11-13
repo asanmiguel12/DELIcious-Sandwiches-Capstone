@@ -13,23 +13,16 @@ public class Meat implements PremiumToppings{
         this.price = price;
     }
 
-    public Meat(){
-
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public double getPrice() {
-        return price;
+        return isPremium();
     }
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public Meat(){
+
     }
 
     Scanner scanner = new Scanner(System.in);
@@ -48,7 +41,6 @@ public class Meat implements PremiumToppings{
             }
 
             }
-
         return null;
     }
 
