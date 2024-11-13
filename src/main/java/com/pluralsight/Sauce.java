@@ -34,8 +34,7 @@ public class Sauce {
         for (String sauceName : Sauce.sauces1) {
             if (sauceChoice.equalsIgnoreCase(sauceName)) {
                 sauceCount++;
-                System.out.println("Sauce: " + sauceChoice +  " " + "x" + sauceCount);
-                return "Sauce: " + sauceChoice +  " " + "x" + sauceCount;
+                return "Sauce: " + sauceName +  " " + "x" + sauceCount;
             }
         }
         return null;

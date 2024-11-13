@@ -32,12 +32,14 @@ public class Meat implements PremiumToppings{
 
         String meatChoice = scanner.nextLine();
         int meatCount = 0;
+        double cost = isPremium();
 
         for (String meatName : meats) {
             if (meatChoice.equalsIgnoreCase(meatName)) {
                 meatCount++;
-                System.out.println("Meat: " + meatChoice + " " + "x" + meatCount);
-                return "Meat: " + meatChoice + " " + "x" + meatCount;
+                cost++;
+//                System.out.println("Meat: " + meatChoice + " " + "x" + meatCount);
+                return "Meat: " + meatName + " " + "x" + meatCount + " " + "Price: " + cost;
             }
 
             }
@@ -47,7 +49,7 @@ public class Meat implements PremiumToppings{
 
     @Override
     public double isPremium() {
-        return price = 1 ;
+        return this.price = 0 ;
 
     }
 }

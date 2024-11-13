@@ -27,8 +27,7 @@ public class Cheese implements PremiumToppings{
         for (String cheeseName : cheeses) {
             if (cheeseChoice.equalsIgnoreCase(cheeseName)) {
                 cheeseCount++;
-                System.out.println("Cheese: " + cheeseChoice + " " + "x" + cheeseCount);
-                return "Cheese: " + cheeseChoice + " " + "x" + cheeseCount;
+                return "Cheese: " + cheeseName + " " + "x" + cheeseCount;
             }
         }
         return null;
@@ -37,7 +36,7 @@ public class Cheese implements PremiumToppings{
 
     @Override
     public double isPremium() {
-        return price = .75 ;
+        return this.price = .75 ;
 
     }
 }

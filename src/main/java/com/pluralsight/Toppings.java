@@ -64,7 +64,6 @@ public class Toppings {
         for (String cheeseName : veggies) {
             if (veggiesChoice.equalsIgnoreCase(cheeseName)) {
                 veggiesCount++;
-                System.out.println("Veggies: " + veggiesChoice + " " + "x" + veggiesCount);
                 return "Veggies: " + veggiesChoice + " " + "x" + veggiesCount;
             }
         }
