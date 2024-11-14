@@ -3,7 +3,7 @@ package com.pluralsight;
 import java.util.List;
 import java.util.Scanner;
 
-public class Cheese implements PremiumToppings{
+public class Cheese{
     private String name;
     private double price;
     static List<String> cheeses = List.of("American", "Provolone", "Cheddar", "Swiss");
@@ -23,6 +23,7 @@ public class Cheese implements PremiumToppings{
 
         String cheeseChoice = scanner.nextLine();
         int cheeseCount = 0;
+        double cost = 0;
 
         for (String cheeseName : cheeses) {
             if (cheeseChoice.equalsIgnoreCase(cheeseName)) {
@@ -31,13 +32,6 @@ public class Cheese implements PremiumToppings{
             }
         }
         return null;
-    }
-
-
-    @Override
-    public double isPremium() {
-        return this.price = .75 ;
-
     }
 }
 

@@ -14,7 +14,7 @@ public class Toppings {
         System.out.println("Please Choose Your Toppings " + "\n" +
                 "1) Meat" + "\n" +
                 "2) Cheese" + "\n" +
-                "3) Veggie" + "\n" +
+                "3) Veggies" + "\n" +
                 "4) Sauce" + "\n" +
                 "5) Finished");
 
@@ -24,23 +24,25 @@ public class Toppings {
             case 1:
                 Meat meat = new Meat();
                 toppingsList.add(meat.getMeat());
-                System.out.println("Your Sandwich: " + toppingsList);
+                System.out.println("Current Toppings: " + toppingsList);
+                toppingsList.add(meat.getExtraMeat());
+                System.out.println("Current Toppings: " + toppingsList);
                 getToppings();
                 break;
             case 2:
                 Cheese cheese = new Cheese();
                 toppingsList.add(cheese.getCheese());
-                System.out.println("Your Sandwich: " + toppingsList);
+                System.out.println("Current Toppings: " + toppingsList);
                 getToppings();
                 break;
             case 3:
                 toppingsList.add(selectVeggies());
-                System.out.println("Your Sandwich: " + toppingsList);
+                System.out.println("Current Toppings: " + toppingsList);
                 getToppings();
             case 4:
                 Sauce sauce = new Sauce();
                 toppingsList.add(sauce.getSauce());
-                System.out.println("Your Sandwich: " + toppingsList);
+                System.out.println("Current Toppings: " + toppingsList);
                 getToppings();
                 break;
             case 5:
@@ -51,6 +53,7 @@ public class Toppings {
         }
         return null;
     }
+
     Scanner scanner1 = new Scanner(System.in);
     public String selectVeggies() {
         List<String> veggies = List.of("Lettuce", "Onions", "Tomatoes", "Jalapenos", "Cucumbers",
@@ -71,7 +74,7 @@ public class Toppings {
     }
 
     public List<String> finished(){
-        System.out.println("Your Sandwich: " + toppingsList);
+        System.out.println("All Current Toppings: " + toppingsList);
         return toppingsList;
     }
 }

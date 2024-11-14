@@ -18,38 +18,6 @@ public class Order {
 
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Sandwich getSandwich() {
-        return sandwich;
-    }
-
-    public void setSandwich(Sandwich sandwich) {
-        this.sandwich = sandwich;
-    }
-
-    public Drink getDrink() {
-        return drink;
-    }
-
-    public void setDrink(Drink drink) {
-        this.drink = drink;
-    }
-
-    public Chips getChips() {
-        return chips;
-    }
-
-    public void setChips(Chips chips) {
-        this.chips = chips;
-    }
-
     static Scanner scanner = new Scanner(System.in);
     public void orderMenu() {
         System.out.println("~ORDER~" + "\n" +
@@ -68,7 +36,7 @@ public class Order {
 
         switch (choice) {
             case 1:
-                sandwich.getBreadSize();
+                sandwich.getSandwich();
                 toppings.getToppings();
                 break;
             case 2:

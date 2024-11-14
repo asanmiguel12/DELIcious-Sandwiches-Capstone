@@ -3,26 +3,22 @@ package com.pluralsight;
 import java.util.List;
 import java.util.Scanner;
 
-public class Meat implements PremiumToppings{
+public class Meat{
     private String name;
     private double price;
+    static Bread bread = new Bread();
     static List<String> meats = List.of("Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon");
 
-    public Meat(String name, double price){
-        this.name = name;
-        this.price = price;
+    public Meat(){
+
     }
 
     public double getPrice() {
-        return isPremium();
+        return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public Meat(){
-
     }
 
     Scanner scanner = new Scanner(System.in);
@@ -32,24 +28,37 @@ public class Meat implements PremiumToppings{
 
         String meatChoice = scanner.nextLine();
         int meatCount = 0;
-        double cost = isPremium();
+        price = 0;
 
         for (String meatName : meats) {
             if (meatChoice.equalsIgnoreCase(meatName)) {
                 meatCount++;
-                cost++;
-//                System.out.println("Meat: " + meatChoice + " " + "x" + meatCount);
-                return "Meat: " + meatName + " " + "x" + meatCount + " " + "Price: " + cost;
+                price++;
+                return "Meat: " + meatName + " " + "x" + meatCount + " " + "Price: " + price;
             }
 
             }
+        scanner.close();
         return null;
     }
 
+    Scanner scanner1 = new Scanner(System.in);
+    public String getExtraMeat(){
+        System.out.println("Would You Like To Add Extra Meat? (Y/N)");
 
-    @Override
-    public double isPremium() {
-        return this.price = 0 ;
+        Toppings toppings = new Toppings();
+        String choice = scanner1.nextLine();
+        int extraMeatCount = 0;
 
+        if (choice.equalsIgnoreCase("Y")) {
+            extraMeatCount++;
+            System.out.println("Extra Meat: " + "x" + extraMeatCount);
+            return "Extra Meat: " + "x" + extraMeatCount;
+        }
+        if (choice.equalsIgnoreCase("N")) {
+            toppings.getToppings();
+        }
+        toppings.getToppings();
+        return null;
     }
 }
