@@ -1,23 +1,17 @@
-package com.pluralsight;
+package com.pluralsight.Sandwich;
 
 import java.util.List;
 import java.util.Scanner;
+
+import static com.pluralsight.Order.sandwich;
 
 public class Bread {
     private String breadSize;
     private String breadType;
 
-    public void setBreadSize(String breadSize) {
-        this.breadSize = breadSize;
-    }
-
-    public void setBreadType(String breadType) {
-        this.breadType = breadType;
-    }
-
     Scanner scanner1 = new Scanner(System.in);
     public String getBreadSize() {
-        System.out.println("~SANDWICH~" + "\n" +
+        System.out.println("~BREAD~" + "\n" +
                 "What size sandwich would you like" + "\n" +
                 "1) 4 Inches" + "\n" +
                 "2) 8 Inches" + "\n" +
@@ -33,19 +27,20 @@ public class Bread {
             case 1:
                 price = 5.50;
                 this.breadSize = size1;
-                return "Sandwich Size: 4 Inches " + "Price: $" + price;
+                return "Sandwich Size: " + this.breadSize + " Price: $" + price;
             case 2:
                 price = 7.00;
                 this.breadSize = size2;
-                return "Sandwich Size: 8 Inches " + "Price: $" + price;
+                return "Sandwich Size: " + size2 + " Price: $" + price;
             case 3:
                 price = 8.50;
                 this.breadSize = size3;
-                return "Sandwich Size: 12 Inches " + "Price: $" + price;
+                return "Sandwich Size:" + size3 + " Price: $" + price ;
             default:
                 System.out.println("You Did Not Select A Size" +
                         "Please Input The Number Of The Size Sandwich You Would Like");
         }
+        System.out.println("Current Sandwich: " + sandwich);
         scanner1.close();
         return null;
     }
@@ -65,5 +60,13 @@ public class Bread {
             }
         }
         return null;
+    }
+
+    public void setBreadSize(String breadSize) {
+        this.breadSize = breadSize;
+    }
+
+    public void setBreadType(String breadType) {
+        this.breadType = breadType;
     }
 }

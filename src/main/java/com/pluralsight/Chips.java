@@ -1,7 +1,9 @@
 package com.pluralsight;
 
+import java.util.List;
+
 public class Chips {
-    public String getChips(){
+    public List<String> getChips(){
         return getChips();
     }
 }

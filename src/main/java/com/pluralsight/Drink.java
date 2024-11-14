@@ -1,7 +1,9 @@
 package com.pluralsight;
 
+import java.util.List;
+
 public class Drink {
-    public String getDrink(){
+    public List<String> getDrink(){
         return getDrink();
     }
 }
