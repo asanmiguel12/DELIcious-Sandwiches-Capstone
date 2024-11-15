@@ -3,7 +3,8 @@ package com.pluralsight.Sandwich;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.sandwich;
+import static com.pluralsight.Order.premiumToppings;
+import static com.pluralsight.Order.regularToppings;
 
 public class Meat{
     private String name;
@@ -17,9 +18,9 @@ public class Meat{
 
     Scanner scanner = new Scanner(System.in);
     public String getMeat() {
-        System.out.println("Please Enter The Type Of Meat You Want:" + "\n" +
-                "\"Steak\", \"Ham\", \"Salami\", \"Roast Beef\", \"Chicken\", \"Bacon\"");
 
+        System.out.println("Please Enter The Type Of Meat You Want:" + "\n" +
+                "\"Steak\", \"Ham\", \"Salami\", \"Roast Beef\", \"Chicken\", \"Bacon\"" + this.price);
         String meatChoice = scanner.nextLine();
         int meatCount = 0;
         this.price = 0;
@@ -31,7 +32,7 @@ public class Meat{
                 return "Meat: " + meatName + " " + "x" + meatCount + " Price: $" + this.price;
             }
 
-            }
+        }
         scanner.close();
         return null;
     }
@@ -51,7 +52,7 @@ public class Meat{
             return "Extra Meat: " + "x" + extraMeatCount + " Price: $" + price;
         }
         if (choice.equalsIgnoreCase("N")) {
-            System.out.println("Current Sandwich: " + sandwich);
+            System.out.println("Your Premium Toppings: " + premiumToppings);
             toppings.getPremiumToppings();
         }
         toppings.getPremiumToppings();

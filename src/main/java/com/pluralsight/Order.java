@@ -6,18 +6,22 @@ import com.pluralsight.Sandwich.Toppings;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Order {
-    public static List<String> sandwich = new ArrayList<>();
-    private Drink drink;
-    private Chips chips;
+    public static List<String> premiumToppings = new ArrayList<>();
+    public static List<String> regularToppings = new ArrayList<>();
+    public static List<String> breadTypeAndSize = new ArrayList<>();
+    public static List<String> drink = new ArrayList<>();
+    public static List<String> chips = new ArrayList<>();
     private double price;
 
-    public Order(List<String> sandwich, Drink drink, Chips chips, double price) {
-        this.sandwich = sandwich;
+    public Order(List<String> RegularToppings, List<String> drink, List<String> chips, double price) {
+        this.regularToppings = RegularToppings;
         this.drink = drink;
         this.chips = chips;
     }
@@ -45,7 +49,7 @@ public class Order {
             case 2:
                 return drink.getDrink();
             case 3:
-                return chips.getChips();
+                 chips.getChips();
             case 4:
                 checkout();
                 break;
@@ -62,13 +66,13 @@ public class Order {
         Bread bread = new Bread();
         Toppings toppings = new Toppings();
 
-        sandwich.add(bread.getBreadSize());
-        System.out.println("Current Sandwich: " + sandwich);
-        sandwich.add(bread.getBreadType());
-        System.out.println("Current Sandwich: " + sandwich);
+        breadTypeAndSize.add(bread.getBreadSize());
+        System.out.println("Current Sandwich: " + regularToppings);
+        breadTypeAndSize.add(bread.getBreadType());
+        System.out.println("Current Sandwich: " + regularToppings);
         toppings.getPremiumToppings();
 
-        return sandwich;
+        return regularToppings;
 
     }
 
@@ -80,20 +84,33 @@ public class Order {
         if (choice.equalsIgnoreCase("Y")) {
             return getSandwich();
         }
-        return  null;
+        return null;
     }
 
+    Scanner scanner2 = new Scanner(System.in);
     public void checkout() {
-        System.out.println("Cart: " + sandwich);
-        System.out.println("Would You Like To Confirm Your Order?");
+        System.out.println("Cart: " + regularToppings);
+        System.out.println("Would You Like To Confirm Your Order? (Y/N)");
 
-        try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Receipts"));
-            bufferedWriter.write(String.valueOf(sandwich));
-            bufferedWriter.close();
-        } catch (Exception e) {
-            System.out.println("Error");
-            e.printStackTrace();
+        String choice = scanner2.nextLine();
+
+        if (choice.equalsIgnoreCase("Y")) {
+            try {
+                LocalDateTime now = LocalDateTime.now();
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+                DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HHmmss");
+
+                String newFile = now.format(dateFormatter) + "-" + now.format(timeFormatter);
+
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(newFile + "Receipt"));
+                bufferedWriter.write(String.valueOf(regularToppings));
+                bufferedWriter.close();
+            } catch (Exception e) {
+                System.out.println("Error");
+                e.printStackTrace();
+            }
+        } if (choice.equalsIgnoreCase("N")) {
+            orderMenu();
         }
     }
 

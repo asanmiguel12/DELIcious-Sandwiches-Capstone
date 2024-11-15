@@ -3,7 +3,7 @@ package com.pluralsight.Sandwich;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.sandwich;
+import static com.pluralsight.Order.regularToppings;
 
 public class Bread {
     private String breadSize;
@@ -11,11 +11,11 @@ public class Bread {
 
     Scanner scanner1 = new Scanner(System.in);
     public String getBreadSize() {
-        System.out.println("~BREAD~" + "\n" +
-                "What size sandwich would you like" + "\n" +
-                "1) 4 Inches" + "\n" +
-                "2) 8 Inches" + "\n" +
-                "3) 12 Inches");
+        System.out.println("~BREAD SIZE~" + "\n" +
+                "What size regularToppings would you like" + "\n" +
+                "1) 4 Inches Price: $5.50" + "\n" +
+                "2) 8 Inches Price: $7.00" + "\n" +
+                "3) 12 Inches Price: $8.50");
 
         int choice = scanner1.nextInt();
         double price = 0;
@@ -27,7 +27,7 @@ public class Bread {
             case 1:
                 price = 5.50;
                 this.breadSize = size1;
-                return "Sandwich Size: " + this.breadSize + " Price: $" + price;
+                return "Sandwich Size: " + size1 + " Price: $" + price;
             case 2:
                 price = 7.00;
                 this.breadSize = size2;
@@ -40,7 +40,7 @@ public class Bread {
                 System.out.println("You Did Not Select A Size" +
                         "Please Input The Number Of The Size Sandwich You Would Like");
         }
-        System.out.println("Current Sandwich: " + sandwich);
+        System.out.println("Current Sandwich: " + regularToppings);
         scanner1.close();
         return null;
     }
@@ -48,7 +48,8 @@ public class Bread {
     Scanner scanner2 = new Scanner(System.in);
     public String getBreadType() {
         List<String> breads = List.of("White", "Wheat", "Rye", "Wrap");
-        System.out.println("Please Enter The Type Of Bread You Want:" + "\n" +
+        System.out.println("~BREAD TYPE~" + "\n" +
+                "Please Enter The Type Of Bread You Want:" + "\n" +
                 "\"White\", \"Wheat\", \"Rye\", \"Wrap\"");
 
         String breadChoice = scanner2.nextLine();

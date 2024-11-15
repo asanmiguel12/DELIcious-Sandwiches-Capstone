@@ -3,7 +3,7 @@ package com.pluralsight.Sandwich;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.sandwich;
+import static com.pluralsight.Order.premiumToppings;
 
 public class Cheese{
     private String name;
@@ -17,7 +17,8 @@ public class Cheese{
 
     Scanner scanner = new Scanner(System.in);
     public String getCheese() {
-        System.out.println("Please Enter The Type Of Cheese You Want:" + "\n" +
+        System.out.println("~CHEESE~" + "\n" +
+                "Please Enter The Type Of Cheese You Want:" + "\n" +
                 "\"American\", \"Provolone\", \"Cheddar\", \"Swiss\"");
 
         String cheeseChoice = scanner.nextLine();
@@ -47,11 +48,27 @@ public class Cheese{
             return "Extra Cheese: " + "x" + extraCheeseCount;
         }
         if (choice.equalsIgnoreCase("N")) {
-            System.out.println("Current Sandwich: " + sandwich);
+            System.out.println("Your Premium Toppings: " + premiumToppings);
             toppings.getPremiumToppings();
         }
         toppings.getPremiumToppings();
         return null;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
 

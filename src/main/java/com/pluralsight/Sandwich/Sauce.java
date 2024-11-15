@@ -3,7 +3,7 @@ package com.pluralsight.Sandwich;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.sandwich;
+import static com.pluralsight.Order.regularToppings;
 
 public class Sauce {
     private String name;
@@ -16,7 +16,8 @@ public class Sauce {
 
     Scanner scanner = new Scanner(System.in);
     public String getSauce() {
-        System.out.println("Please Enter The Type Of Sauce You Want:" + "\n" +
+        System.out.println("~SAUCE~" + "\n" +
+                "Please Enter The Type Of Sauce You Want:" + "\n" +
                 "\"Mayo\", \"Mustard\", \"Ranch\", \"Ketchup\", \"Thousand Island\", \"Vinaigrette\"");
 
         String sauceChoice = scanner.nextLine();
@@ -46,7 +47,7 @@ public class Sauce {
         }
         if (choice.equalsIgnoreCase("N")) {
             Toppings toppings = new Toppings();
-            System.out.println("Current Sandwich: " + sandwich);
+            System.out.println("Your Regular Toppings: " + regularToppings);
             toppings.getRegularToppings();
         }
         return null;
@@ -60,7 +61,4 @@ public class Sauce {
         this.name = name;
     }
 
-    public Sauce(String name) {
-        this.name = name;
-    }
 }
