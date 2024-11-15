@@ -1,15 +1,16 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.chips;
 
 public class Chips {
+    public static List<String> chips = new ArrayList<>();
+    List<String> chipChoices = List.of("Barbeque", "Sour Cream & Onion", "Spicy");
+
 
     Scanner scanner = new Scanner(System.in);
-    List<String> chips = List.of("Barbeque", "Sour Cream & Onion", "Spicy");
-
     public String getChips(){
 
         System.out.println("Would You Like To Add Chips? (Y/N)");
@@ -24,20 +25,22 @@ public class Chips {
             int chipsCount = 0;
             double price = 1.50;
 
-            for(String chipsName : chips) {
+            for(String chipsName : chipChoices) {
                 if (chipsChoice.equalsIgnoreCase(chipsName)) {
                     chipsCount++;
                     System.out.println("Chips: " + chipsName + " " + "x" + chipsCount + " Price: $" + price);
+                    chips.add("Drink: " + chipsName + " " + "x" + chipsCount + " Price: $" + price);
+                    Order order = new Order();
+                    order.orderMenu();
                     return "Chips: " + chipsName + " " + "x" + chipsCount + " Price: $" + price;
                 }
             }
-            Order order = new Order();
-            order.orderMenu();
         }
         if (choice.equalsIgnoreCase("N")) {
             Order order = new Order();
             order.orderMenu();
         }
+        scanner.close();
         return null;
     }
 }

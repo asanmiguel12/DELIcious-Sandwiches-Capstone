@@ -4,16 +4,15 @@ import com.pluralsight.Order;
 
 import java.util.List;
 import java.util.Scanner;
-
-import static com.pluralsight.Order.*;
+import static com.pluralsight.Sandwich.Sandwich.*;
 
 public class Toppings {
     List<String> veggies = List.of("Lettuce", "Onions", "Tomatoes", "Jalapenos", "Cucumbers",
             "Pickles", "Guacamole", "Mushrooms");
 
     Scanner scanner = new Scanner(System.in);
-    public void getPremiumToppings() {
-            System.out.println("~TOPPINGS~" + "\n" +
+    public String getPremiumToppings() {
+            System.out.println("~PREMIUM TOPPINGS~" + "\n" +
                     "Please Choose Your Premium Toppings " + "\n" +
                     "1) Meat" + "\n" +
                     "2) Cheese" + "\n" +
@@ -40,9 +39,10 @@ public class Toppings {
                     toppings.getRegularToppings();
                     break;
             }
+            return null;
         }
 
-    public void getRegularToppings() {
+    public String getRegularToppings() {
         System.out.println("~REGULAR TOPPINGS~" + "\n" +
                 "Please Choose Your Regular Toppings " + "\n" +
                 "1) Veggies" + "\n" +
@@ -67,6 +67,7 @@ public class Toppings {
                 order.orderMenu();
                 break;
         }
+        return null;
     }
 
     Scanner scanner1 = new Scanner(System.in);

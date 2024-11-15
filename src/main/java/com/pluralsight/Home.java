@@ -2,11 +2,12 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-public class HomeScreen {
+public class Home {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.println("Welcome To DELIcious Sandwiches" + "\n" +
-                "What Would You Like To Do Today?" + "\n" +
+
+        System.out.println("\n\n~Welcome To DELIcious Sandwiches~" + "\n\n" +
+                "How Can We Help You Today?" + "\n" +
                 "1) Place A New Order " + "\n" +
                 "2) Exit" );
         int choice = scanner.nextInt();

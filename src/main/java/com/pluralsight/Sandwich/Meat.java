@@ -2,8 +2,7 @@ package com.pluralsight.Sandwich;
 
 import java.util.List;
 import java.util.Scanner;
-
-import static com.pluralsight.Order.*;
+import static com.pluralsight.Sandwich.Sandwich.*;
 
 public class Meat{
     private String name;
@@ -11,9 +10,6 @@ public class Meat{
     Toppings toppings = new Toppings();
     List<String> meats = List.of("Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon");
 
-    public Meat(){
-
-    }
 
     Scanner scanner = new Scanner(System.in);
     public String getMeat() {
@@ -30,14 +26,13 @@ public class Meat{
                 this.price++;
                 return "Meat: " + meatName + " " + "x" + meatCount + " Price: $" + this.price;
             }
-
         }
         scanner.close();
         return null;
     }
 
     Scanner scanner1 = new Scanner(System.in);
-    public String getExtraMeat(){
+    public String getExtraMeat() {
         System.out.println("Would You Like To Add Extra Meat? (Y/N)");
 
         String choice = scanner1.nextLine();
@@ -55,7 +50,7 @@ public class Meat{
             System.out.println("Current Sandwich: " + breadTypeAndSize);
             toppings.getPremiumToppings();
         }
-        toppings.getPremiumToppings();
+        scanner1.close();
         return null;
     }
 

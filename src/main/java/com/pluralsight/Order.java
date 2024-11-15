@@ -1,7 +1,7 @@
 package com.pluralsight;
 
-import com.pluralsight.Sandwich.Bread;
 import com.pluralsight.Sandwich.Meat;
+import com.pluralsight.Sandwich.Sandwich;
 import com.pluralsight.Sandwich.Toppings;
 
 import java.io.BufferedWriter;
@@ -12,83 +12,48 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.pluralsight.Sandwich.Sandwich.*;
+
 public class Order {
-    public static List<String> premiumToppings = new ArrayList<>();
-    public static List<String> regularToppings = new ArrayList<>();
-    public static List<String> breadTypeAndSize = new ArrayList<>();
-    public static List<String> drink = new ArrayList<>();
     public static List<String> chips = new ArrayList<>();
-    private double price;
-
-    public Order(List<String> RegularToppings, List<String> drink, List<String> chips, double price) {
-        this.regularToppings = RegularToppings;
-        this.drink = drink;
-        this.chips = chips;
-    }
-
-    public Order () {
-
-    }
 
     static Scanner scanner = new Scanner(System.in);
     public List<String> orderMenu() {
         System.out.println("~ORDER~" + "\n" +
-                "1) Add Sandwich" + "\n" +
-                "2) Add Drink" + "\n" +
-                "3) Add Chips" + "\n" +
-                "4) Checkout" + "\n" +
+                "1) Add DELIcious Sandwich" + "\n" +
+                "2) Add Additional DELIcious Sandwich" + "\n"+
+                "3) Add Drink" + "\n" +
+                "4) Add Chips" + "\n" +
+                "5) Checkout" + "\n" +
                 "0) Cancel Order");
 
         int choice = scanner.nextInt();
         Drink drink = new Drink();
         Chips chips = new Chips();
+        Sandwich sandwich = new Sandwich();
+
 
         switch (choice) {
             case 1:
-                 getSandwich();
+                 sandwich.getSandwich();
                  break;
             case 2:
+                sandwich.addSandwich();
+            case 3:
                  drink.getDrink();
                  break;
-            case 3:
+            case 4:
                  chips.getChips();
                  break;
-            case 4:
+            case 5:
                 checkout();
                 break;
+            case 6:
+                Home home = new Home();
+                Home.exit();
+                break;
             default:
-                System.out.println("Invalid Input " +
-                        "Please Try Again");
-
-        }
-        return null;
-    }
-
-    public String getSandwich() {
-
-        Bread bread = new Bread();
-        Toppings toppings = new Toppings();
-
-        breadTypeAndSize.add(bread.getBreadSize());
-        System.out.println("Current Sandwich: " + breadTypeAndSize);
-        breadTypeAndSize.add(bread.getBreadType());
-        System.out.println("Current Sandwich: " + breadTypeAndSize);
-        toppings.getPremiumToppings();
-        toppings.getRegularToppings();
-
-        return "Your DELIcious Sandwich:" + "\n" +
-                breadTypeAndSize + "\n" +
-                premiumToppings + "\n" +
-                regularToppings;
-    }
-
-    Scanner scanner1 = new Scanner(System.in);
-    public String addSandwich() {
-        System.out.println("Would You Like To Add Another Sandwich? (Y/N)");
-
-        String choice = scanner1.nextLine();
-        if (choice.equalsIgnoreCase("Y")) {
-            return getSandwich();
+                System.out.println("Invalid Input Please Try Again");
         }
         return null;
     }
@@ -113,10 +78,12 @@ public class Order {
                 String newFile = now.format(dateFormatter) + "-" + now.format(timeFormatter);
 
                 BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(newFile + "Receipt"));
-                bufferedWriter.write(String.valueOf(regularToppings));
+                bufferedWriter.write(breadTypeAndSize + "\n" +
+                        premiumToppings + "\n" +
+                        regularToppings);
                 bufferedWriter.close();
             } catch (Exception e) {
-                System.out.println("Error");
+                System.out.println("Error ");
                 e.printStackTrace();
             }
         } if (choice.equalsIgnoreCase("N")) {

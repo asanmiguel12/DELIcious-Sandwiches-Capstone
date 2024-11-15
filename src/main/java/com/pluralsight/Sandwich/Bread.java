@@ -2,8 +2,7 @@ package com.pluralsight.Sandwich;
 
 import java.util.List;
 import java.util.Scanner;
-
-import static com.pluralsight.Order.regularToppings;
+import static com.pluralsight.Sandwich.Sandwich.*;
 
 public class Bread {
     private String breadSize;
@@ -35,7 +34,7 @@ public class Bread {
             case 3:
                 price = 8.50;
                 this.breadSize = size3;
-                return "Sandwich Size:" + size3 + " Price: $" + price ;
+                return "Sandwich Size: " + size3 + " Price: $" + price ;
             default:
                 System.out.println("You Did Not Select A Size" +
                         "Please Input The Number Of The Size Sandwich You Would Like");
@@ -55,7 +54,7 @@ public class Bread {
 
         for (String breadName : breads) {
             if (breadChoice.equalsIgnoreCase(breadName)) {
-                System.out.println("Bread: " + breadChoice);
+                System.out.println("Great Choice! Bread: " + breadChoice);
                 return "Bread Type: " + breadName;
             }
         }

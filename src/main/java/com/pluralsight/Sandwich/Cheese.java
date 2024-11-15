@@ -2,19 +2,14 @@ package com.pluralsight.Sandwich;
 
 import java.util.List;
 import java.util.Scanner;
+import static com.pluralsight.Sandwich.Sandwich.*;
 
-import static com.pluralsight.Order.breadTypeAndSize;
-import static com.pluralsight.Order.premiumToppings;
 
 public class Cheese{
     private String name;
     private double price;
     Toppings toppings = new Toppings();
     List<String> cheeses = List.of("American", "Provolone", "Cheddar", "Swiss");
-
-    public Cheese() {
-
-    }
 
     Scanner scanner = new Scanner(System.in);
     public String getCheese() {
@@ -32,6 +27,7 @@ public class Cheese{
                 return "Cheese: " + cheeseName + " " + "x" + cheeseCount;
             }
         }
+        scanner.close();
         return null;
     }
 

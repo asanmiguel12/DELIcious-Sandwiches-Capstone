@@ -2,17 +2,13 @@ package com.pluralsight.Sandwich;
 
 import java.util.List;
 import java.util.Scanner;
+import static com.pluralsight.Sandwich.Sandwich.*;
 
-import static com.pluralsight.Order.*;
 
 public class Sauce {
     private String name;
     List<String> sauces = List.of("Mayo", "Mustard", "Ranch", "Ketchup",
                 "Thousand Island", "Vinaigrette");
-
-    public Sauce() {
-
-    }
 
     Scanner scanner = new Scanner(System.in);
     public String getSauce() {
@@ -32,6 +28,7 @@ public class Sauce {
                 return "Sauce: " + sauceName +  " " + "x" + sauceCount;
             }
         }
+        scanner.close();
         return null;
     }
 
@@ -53,6 +50,7 @@ public class Sauce {
             System.out.println("Your Regular Toppings: " + regularToppings);
             toppings.getRegularToppings();
         }
+        scanner1.close();
         return null;
     }
 

@@ -1,25 +1,21 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.drink;
 
 public class Drink {
-    HashMap<String, Double> drinks = new HashMap<>();
-
-    public void addDrinkElements() {
-        drinks.put("Small", 2.00);
-        drinks.put("Medium", 2.50);
-        drinks.put("Large", 3.00);
-    }
+    public static List<String> drink = new ArrayList<>();
+    HashMap<String, Double> drinkChoices = new HashMap<>();
 
     Scanner scanner = new Scanner(System.in);
     public String getDrink(){
 
-        drinks.put("Small", 2.00);
-        drinks.put("Medium", 2.50);
-        drinks.put("Large", 3.00);
+        drinkChoices.put("Small", 2.00);
+        drinkChoices.put("Medium", 2.50);
+        drinkChoices.put("Large", 3.00);
 
         System.out.println("Would You Like To Add A Drink? (Y/N)");
 
@@ -33,20 +29,27 @@ public class Drink {
             int drinksCount = 0;
 
 
-            for(String drinkName : drinks.keySet())
+            for(String drinkName : drinkChoices.keySet())
                 if (drinkChoice.equalsIgnoreCase(drinkName)) {
                     drinksCount++;
-                    System.out.println("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinks.values());
-                    drink.add("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinks.values());
+                    System.out.println("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values());
+                    drink.add("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values());
                     Order order = new Order();
                     order.orderMenu();
-                    return "Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinks.values();
+                    return "Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values();
+                } else {
+                    System.out.println("Invalid Input Please Try Again");
+                    getDrink();
                 }
             }
         if (choice.equalsIgnoreCase("N")) {
             Order order = new Order();
             order.orderMenu();
+        } else {
+            System.out.println("Invalid Input Please Try Again");
+            getDrink();
         }
+        scanner.close();
         return null;
     }
 }
