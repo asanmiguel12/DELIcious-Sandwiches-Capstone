@@ -31,10 +31,14 @@ public class Order {
         switch (choice) {
             case 1:
                  Sandwich sandwich = new Sandwich();
+                 SignatureSandwich signatureSandwich = new SignatureSandwich();
+                 signatureSandwich.signatureSandwichPrompt();
                  sandwich.getSandwich();
                  break;
             case 2:
                  Sandwich sandwich1 = new Sandwich();
+                 SignatureSandwich signatureSandwich1 = new SignatureSandwich();
+                 signatureSandwich1.signatureSandwichPrompt();
                  sandwich1.addSandwich();
                  break;
             case 3:
@@ -60,6 +64,7 @@ public class Order {
                 break;
             default:
                 System.out.println("Invalid Input Please Try Again");
+                orderMenu();
         }
     }
 

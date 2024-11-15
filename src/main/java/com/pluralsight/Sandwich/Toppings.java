@@ -40,6 +40,8 @@ public class Toppings {
                     System.out.println("Looks DELIcious So Far!");
                     toppings.getRegularToppings();
                     break;
+                default:
+
             }
             return null;
         }
@@ -68,6 +70,8 @@ public class Toppings {
                 System.out.println("Looks DELIcious So Far!");
                 order.orderMenu();
                 break;
+            default:
+                System.out.println("You");
         }
         return null;
     }

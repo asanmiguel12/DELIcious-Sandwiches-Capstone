@@ -14,6 +14,8 @@
 
 ## Overview
 
+![Diagram](Images/CapstoneDiagram.png)
+
 ![DeliProjectFavCode](Images/OrderMenu.png)
 
 Streamlined and simple user interface allows user to easily navigate application menus
