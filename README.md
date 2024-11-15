@@ -44,7 +44,7 @@ Method that optimally prompts user of what is in their current sandwich to creat
 - `yarn` to install dependencies
 - `yarn run link` to link react-native dependencies
 - `yarn start:ios` to start the packager and run the app in the iOS simulator (`yarn start:ios:logger` will boot the application with [redux-logger](<https://github.com/evgenyrodionov/redux-logger>))
-- `yarn start:android` to start the packager and run the app in the the Android device/emulator (`yarn start:android:logger` will boot the application with [redux-logger](https://github.com/evgenyrodionov/redux-logger))
+- `yarn start:android` to start the packager and run the app in the Android device/emulator (`yarn start:android:logger` will boot the application with [redux-logger](https://github.com/evgenyrodionov/redux-logger))
 
 
 ## Authors 
