@@ -95,6 +95,8 @@ public class Order {
                         chips + "\n" +
                         drinks + "\n" +
                         total);
+                System.out.println("Thank You For Your DELIcious Order!");
+                Home.exit();
                 bufferedWriter.close();
             } catch (Exception e) {
                 System.out.println("Error ");
