@@ -17,7 +17,7 @@ public class Order {
     public static List<String> chips = new ArrayList<>();
 
     static Scanner scanner = new Scanner(System.in);
-    public List<String> orderMenu() {
+    public void orderMenu() {
         System.out.println("~ORDER~" + "\n" +
                 "1) Add DELIcious Sandwich" + "\n" +
                 "2) Add Additional DELIcious Sandwich" + "\n"+
@@ -27,21 +27,22 @@ public class Order {
                 "0) Cancel Order");
 
         int choice = scanner.nextInt();
-        Drink drink = new Drink();
-        Chips chips1 = new Chips();
-        Sandwich sandwich = new Sandwich();
-
 
         switch (choice) {
             case 1:
+                 Sandwich sandwich = new Sandwich();
                  sandwich.getSandwich();
                  break;
             case 2:
-                 sandwich.addSandwich();
+                 Sandwich sandwich1 = new Sandwich();
+                 sandwich1.addSandwich();
+                 break;
             case 3:
+                 Drink drink = new Drink();
                  drink.getDrink();
                  break;
             case 4:
+                 Chips chips1 = new Chips();
                  chips1.getChips();
                  break;
             case 5:
@@ -60,7 +61,6 @@ public class Order {
             default:
                 System.out.println("Invalid Input Please Try Again");
         }
-        return null;
     }
 
     Scanner scanner2 = new Scanner(System.in);
@@ -104,26 +104,28 @@ public class Order {
         Bread bread = new Bread();
         Meat meat = new Meat();
         Cheese cheese = new Cheese();
+        Drink drink = new Drink();
+        Chips chips = new Chips();
 
         if (breadTypeAndSize.contains("Sandwich Size: 4 Inches Price: $5.5")
                 && premiumToppings.contains("Extra Meat: x1")) {
-            double total = meat.getPrice() + cheese.getPrice() + bread.getPrice() + .50;
+            double total = meat.getPrice() + cheese.getPrice() + bread.getPrice() + drink.getPrice() + chips.getPrice() + .50;
             System.out.println("Total: $" + total);
             return "Total: $" + total;
         }
         if (breadTypeAndSize.contains("Sandwich Size: 8 Inches Price: $7.0")
                 && premiumToppings.contains("Extra Meat: x1")) {
-            double total = meat.getPrice() + cheese.getPrice() + bread.getPrice() + .75;
+            double total = meat.getPrice() + cheese.getPrice() + bread.getPrice() + drink.getPrice() + chips.getPrice() + .75;
             System.out.println("Total: $" + total);
             return "Total: $" + total;
         }
         if (breadTypeAndSize.contains("Sandwich Size: 12 Inches Price: $8.5")
                 && premiumToppings.contains("Extra Meat: x1")) {
-            double total = meat.getPrice() + cheese.getPrice() + bread.getPrice() + 1.50;
+            double total = meat.getPrice() + cheese.getPrice() + bread.getPrice() + drink.getPrice() + chips.getPrice() + 1.50;
             System.out.println("Total: $" + total);
             return "Total: $" + total;
         }
-        double total = meat.getPrice() + cheese.getPrice() + bread.getPrice();
+        double total = meat.getPrice() + cheese.getPrice() + bread.getPrice() + drink.getPrice() + chips.getPrice();
         System.out.println("Total: $" + total);
         return "Total: $" + total;
     }

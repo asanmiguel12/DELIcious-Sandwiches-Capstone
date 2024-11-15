@@ -34,10 +34,10 @@ public class Drink {
                 if (drinkChoice.equalsIgnoreCase(drinkName)) {
                     drinksCount++;
                     System.out.println("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values());
-                    drinks.add("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values());
+                    drinks.add("Drink: " + drinkName + " " + "x" + drinksCount);
                     Order order = new Order();
                     order.orderMenu();
-                    return "Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values();
+                    return "Drink: " + drinkName + " " + "x" + drinksCount;
                 } else {
                     System.out.println("Invalid Input Please Try Again");
                     getDrink();
@@ -55,7 +55,16 @@ public class Drink {
     }
 
     public double getPrice() {
-        return price;
+        if (drinks.contains("Drink: Small x1")) {
+            return this.price = 2.00;
+        }
+        if (drinks.contains("Drink: Medium x1")) {
+            return this.price = 2.50;
+        }
+        if (drinks.contains("Drink: Large x1")) {
+            return this.price = 3.00;
+        }
+        return this.price = 0;
     }
 
     public void setPrice(double price) {

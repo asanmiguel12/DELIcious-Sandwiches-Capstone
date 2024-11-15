@@ -12,7 +12,8 @@ public class Chips {
 
 
     Scanner scanner = new Scanner(System.in);
-    public String getChips(){
+
+    public String getChips() {
 
         System.out.println("Would You Like To Add Chips? (Y/N)");
 
@@ -26,7 +27,7 @@ public class Chips {
             int chipsCount = 0;
             double price = 1.50;
 
-            for(String chipsName : chipChoices) {
+            for (String chipsName : chipChoices) {
                 if (chipsChoice.equalsIgnoreCase(chipsName)) {
                     chipsCount++;
                     System.out.println("Chips: " + chipsName + " " + "x" + chipsCount + " Price: $" + price);
@@ -46,8 +47,11 @@ public class Chips {
     }
 
     public double getPrice() {
-        return price = 1.50;
+        if (!chips.isEmpty()) {
+            return price = 1.50;
     }
+        return price = 0;
+}
 
     public void setPrice(double price) {
         this.price = price;

@@ -35,6 +35,8 @@ public class Toppings {
                     getPremiumToppings();
                 case 3:
                     Toppings toppings = new Toppings();
+                    Sandwich sandwich = new Sandwich();
+                    sandwich.isToasted();
                     System.out.println("Looks DELIcious So Far!");
                     toppings.getRegularToppings();
                     break;

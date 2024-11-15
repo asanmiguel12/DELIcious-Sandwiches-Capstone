@@ -25,6 +25,7 @@ public class Sandwich {
         System.out.println("Current Sandwich: " + breadTypeAndSize);
         toppings.getPremiumToppings();
         toppings.getRegularToppings();
+        isToasted();
 
 
         return "Your DELIcious Sandwich:" + "\n" +
