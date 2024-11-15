@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 
 public class Drink {
-    public static List<String> drink = new ArrayList<>();
+    public static List<String> drinks = new ArrayList<>();
     HashMap<String, Double> drinkChoices = new HashMap<>();
+    private double price;
 
     Scanner scanner = new Scanner(System.in);
     public String getDrink(){
@@ -33,7 +34,7 @@ public class Drink {
                 if (drinkChoice.equalsIgnoreCase(drinkName)) {
                     drinksCount++;
                     System.out.println("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values());
-                    drink.add("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values());
+                    drinks.add("Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values());
                     Order order = new Order();
                     order.orderMenu();
                     return "Drink: " + drinkName + " " + "x" + drinksCount + " Price: $" + drinkChoices.values();
@@ -51,5 +52,13 @@ public class Drink {
         }
         scanner.close();
         return null;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

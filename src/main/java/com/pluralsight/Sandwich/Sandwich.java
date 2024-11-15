@@ -63,6 +63,22 @@ public class Sandwich {
             System.out.println("Invalid Input Please Try Again");
             addSandwich();
         }
+        scanner1.close();
         return null;
+    }
+
+    Scanner scanner2 = new Scanner(System.in);
+    public void isToasted() {
+        System.out.println("Would You Like Your Sandwich Toasted? (Y/N)");
+
+        String choice = scanner2.nextLine();
+        if (choice.equalsIgnoreCase("Y")) {
+            breadTypeAndSize.add("Toasted");
+            System.out.println("Your DELIcious Sandwich:" + "\n" +
+                    breadTypeAndSize + "\n" +
+                    premiumToppings + "\n" +
+                    regularToppings);
+        }
+
     }
 }

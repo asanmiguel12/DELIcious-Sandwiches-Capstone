@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Chips {
     public static List<String> chips = new ArrayList<>();
     List<String> chipChoices = List.of("Barbeque", "Sour Cream & Onion", "Spicy");
+    private double price;
 
 
     Scanner scanner = new Scanner(System.in);
@@ -42,5 +43,13 @@ public class Chips {
         }
         scanner.close();
         return null;
+    }
+
+    public double getPrice() {
+        return price = 1.50;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

@@ -7,6 +7,7 @@ import static com.pluralsight.Sandwich.Sandwich.*;
 public class Meat{
     private String name;
     private double price;
+    private double extraPrice;
     Toppings toppings = new Toppings();
     List<String> meats = List.of("Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon");
 
@@ -37,17 +38,17 @@ public class Meat{
 
         String choice = scanner1.nextLine();
         int extraMeatCount = 0;
-        double price = 0;
+
 
         if (choice.equalsIgnoreCase("Y")) {
-            price = .50;
             extraMeatCount++;
             System.out.println("Current Sandwich: " + breadTypeAndSize);
-            System.out.println("Added Extra Meat: " + "x" + extraMeatCount + " Price: $" + price);
-            return "Extra Meat: " + "x" + extraMeatCount + " Price: $" + price;
+            System.out.println("Added Extra Meat: " + "x" + extraMeatCount);
+            return "Extra Meat: " + "x" + extraMeatCount;
         }
         if (choice.equalsIgnoreCase("N")) {
             System.out.println("Current Sandwich: " + breadTypeAndSize);
+            System.out.println("Your Premium Toppings: " + premiumToppings);
             toppings.getPremiumToppings();
         }
         scanner1.close();
@@ -55,7 +56,16 @@ public class Meat{
     }
 
     public double getPrice() {
-        return this.price;
+        if (breadTypeAndSize.contains("Sandwich Size: 4 Inches Price: $5.5")) {
+            return this.price = 1.00;
+        }
+        if (breadTypeAndSize.contains("Sandwich Size: 8 Inches Price: $7.0")) {
+            return this.price = 2.00;
+        }
+        if (breadTypeAndSize.contains("Sandwich Size: 12 Inches Price: $8.5")) {
+            return this.price = 3.00;
+        }
+        return this.price = 0;
     }
 
     public void setPrice(double price) {

@@ -19,7 +19,6 @@ public class Cheese{
 
         String cheeseChoice = scanner.nextLine();
         int cheeseCount = 0;
-        double cost = 0;
 
         for (String cheeseName : cheeses) {
             if (cheeseChoice.equalsIgnoreCase(cheeseName)) {
@@ -37,12 +36,11 @@ public class Cheese{
 
         String choice = scanner1.nextLine();
         int extraCheeseCount = 0;
-        double price = .75;
 
         if (choice.equalsIgnoreCase("Y")) {
             extraCheeseCount++;
             System.out.println("Current Sandwich: " + breadTypeAndSize);
-            System.out.println("Added Extra Cheese: " + "x" + extraCheeseCount + price);
+            System.out.println("Added Extra Cheese: " + "x" + extraCheeseCount);
             return "Extra Cheese: " + "x" + extraCheeseCount;
         }
         if (choice.equalsIgnoreCase("N")) {
@@ -55,7 +53,16 @@ public class Cheese{
     }
 
     public double getPrice() {
-        return price;
+        if (breadTypeAndSize.contains("Sandwich Size: 4 Inches Price: $5.5")) {
+            return this.price = 0.75;
+        }
+        if (breadTypeAndSize.contains("Sandwich Size: 8 Inches Price: $7.0")) {
+            return this.price = 1.50;
+        }
+        if (breadTypeAndSize.contains("Sandwich Size: 12 Inches Price: $8.5")) {
+            return this.price = 2.25;
+        }
+        return this.price = 0;
     }
 
     public void setPrice(double price) {

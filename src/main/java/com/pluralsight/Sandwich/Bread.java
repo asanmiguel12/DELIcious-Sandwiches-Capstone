@@ -7,6 +7,7 @@ import static com.pluralsight.Sandwich.Sandwich.*;
 public class Bread {
     private String breadSize;
     private String breadType;
+    private double price;
 
     Scanner scanner1 = new Scanner(System.in);
     public String getBreadSize() {
@@ -54,18 +55,28 @@ public class Bread {
 
         for (String breadName : breads) {
             if (breadChoice.equalsIgnoreCase(breadName)) {
-                System.out.println("Great Choice! Bread: " + breadChoice);
+                System.out.println("Great Choice! Bread: " + breadName);
                 return "Bread Type: " + breadName;
             }
         }
         return null;
     }
 
-    public void setBreadSize(String breadSize) {
-        this.breadSize = breadSize;
+
+    public double getPrice() {
+        if (breadTypeAndSize.contains("Sandwich Size: 4 Inches Price: $5.5")) {
+            return this.price = 5.50;
+        }
+        if (breadTypeAndSize.contains("Sandwich Size: 8 Inches Price: $7.0")) {
+            return this.price = 7.00;
+        }
+        if (breadTypeAndSize.contains("Sandwich Size: 12 Inches Price: $8.5")) {
+            return this.price = 8.50;
+        }
+        return this.price;
     }
 
-    public void setBreadType(String breadType) {
-        this.breadType = breadType;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

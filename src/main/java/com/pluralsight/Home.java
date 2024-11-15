@@ -3,8 +3,9 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class Home {
+
     static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
+    public static void homeMenu() {
 
         System.out.println("\n\n~Welcome To DELIcious Sandwiches~" + "\n\n" +
                 "How Can We Help You Today?" + "\n" +

@@ -24,7 +24,7 @@ public class Sauce {
                 sauceCount++;
                 System.out.println("Current Sandwich: " + breadTypeAndSize);
                 System.out.println("Your Premium Toppings: " + premiumToppings);
-                System.out.println("Added Veggies: " + sauceName + " " + "x" + sauceCount);
+                System.out.println("Added Sauce: " + sauceName + " " + "x" + sauceCount);
                 return "Sauce: " + sauceName +  " " + "x" + sauceCount;
             }
         }
