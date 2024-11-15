@@ -5,8 +5,7 @@ import com.pluralsight.Order;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.premiumToppings;
-import static com.pluralsight.Order.regularToppings;
+import static com.pluralsight.Order.*;
 
 public class Toppings {
     List<String> veggies = List.of("Lettuce", "Onions", "Tomatoes", "Jalapenos", "Cucumbers",
@@ -25,12 +24,14 @@ public class Toppings {
             switch (choice) {
                 case 1:
                     Meat meat = new Meat();
-                    premiumToppings.add(meat.getMeat() + ", " + meat.getExtraMeat());
+                    premiumToppings.add(meat.getMeat());
+                    premiumToppings.add(meat.getExtraMeat());
                     System.out.println("Your Premium Toppings: " + premiumToppings);
                     getPremiumToppings();
                 case 2:
                     Cheese cheese = new Cheese();
-                    premiumToppings.add(cheese.getCheese() + ", " + cheese.getExtraCheese());
+                    premiumToppings.add(cheese.getCheese());
+                    premiumToppings.add(cheese.getExtraCheese());
                     System.out.println("Your Premium Toppings: " + premiumToppings);
                     getPremiumToppings();
                 case 3:
@@ -53,7 +54,7 @@ public class Toppings {
         switch (choice) {
             case 1:
                 regularToppings.add(selectVeggies());
-                System.out.println("Your Regular Toppings: " + regularToppings );
+                System.out.println("Your Regular Toppings: " + regularToppings);
                 getRegularToppings();
             case 2:
                 Sauce sauce = new Sauce();
@@ -81,6 +82,9 @@ public class Toppings {
         for (String veggiesName : veggies) {
             if (veggiesChoice.equalsIgnoreCase(veggiesName)) {
                 veggiesCount++;
+                System.out.println("Current Sandwich: " + breadTypeAndSize);
+                System.out.println("Your Premium Toppings: " + premiumToppings);
+                System.out.println("Added Veggies: " + veggiesName + " " + "x" + veggiesCount);
                 return "Veggies: " + veggiesName + " " + "x" + veggiesCount;
             }
         }

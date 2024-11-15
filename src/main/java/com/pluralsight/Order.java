@@ -45,7 +45,7 @@ public class Order {
 
         switch (choice) {
             case 1:
-                return getSandwich();
+                 getSandwich();
             case 2:
                 return drink.getDrink();
             case 3:
@@ -61,23 +61,26 @@ public class Order {
         return null;
     }
 
-    public List<String> getSandwich() {
+    public String getSandwich() {
 
         Bread bread = new Bread();
         Toppings toppings = new Toppings();
 
         breadTypeAndSize.add(bread.getBreadSize());
-        System.out.println("Current Sandwich: " + regularToppings);
+        System.out.println("Current Sandwich: " + breadTypeAndSize);
         breadTypeAndSize.add(bread.getBreadType());
-        System.out.println("Current Sandwich: " + regularToppings);
+        System.out.println("Current Sandwich: " + breadTypeAndSize);
         toppings.getPremiumToppings();
+        toppings.getRegularToppings();
 
-        return regularToppings;
-
+        return "Your DELIcious Sandwich:" + "\n" +
+                breadTypeAndSize + "\n" +
+                premiumToppings + "\n" +
+                regularToppings;
     }
 
     Scanner scanner1 = new Scanner(System.in);
-    public List<String> addSandwich() {
+    public String addSandwich() {
         System.out.println("Would You Like To Add Another Sandwich? (Y/N)");
 
         String choice = scanner1.nextLine();
@@ -89,7 +92,11 @@ public class Order {
 
     Scanner scanner2 = new Scanner(System.in);
     public void checkout() {
-        System.out.println("Cart: " + regularToppings);
+        System.out.println("Cart: " + "Your DELIcious Sandwich:" + "\n" +
+                breadTypeAndSize + "\n" +
+                premiumToppings + "\n" +
+                regularToppings);
+        
         System.out.println("Would You Like To Confirm Your Order? (Y/N)");
 
         String choice = scanner2.nextLine();

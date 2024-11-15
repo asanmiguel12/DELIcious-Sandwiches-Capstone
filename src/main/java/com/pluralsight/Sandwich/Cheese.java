@@ -3,6 +3,7 @@ package com.pluralsight.Sandwich;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.pluralsight.Order.breadTypeAndSize;
 import static com.pluralsight.Order.premiumToppings;
 
 public class Cheese{
@@ -44,10 +45,12 @@ public class Cheese{
 
         if (choice.equalsIgnoreCase("Y")) {
             extraCheeseCount++;
-            System.out.println("Extra Cheese: " + "x" + extraCheeseCount);
+            System.out.println("Current Sandwich: " + breadTypeAndSize);
+            System.out.println("Added Extra Cheese: " + "x" + extraCheeseCount + price);
             return "Extra Cheese: " + "x" + extraCheeseCount;
         }
         if (choice.equalsIgnoreCase("N")) {
+            System.out.println("Current Sandwich: " + breadTypeAndSize);
             System.out.println("Your Premium Toppings: " + premiumToppings);
             toppings.getPremiumToppings();
         }

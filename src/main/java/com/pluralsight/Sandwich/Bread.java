@@ -40,7 +40,6 @@ public class Bread {
                 System.out.println("You Did Not Select A Size" +
                         "Please Input The Number Of The Size Sandwich You Would Like");
         }
-        System.out.println("Current Sandwich: " + regularToppings);
         scanner1.close();
         return null;
     }

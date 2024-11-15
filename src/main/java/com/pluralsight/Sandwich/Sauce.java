@@ -3,7 +3,7 @@ package com.pluralsight.Sandwich;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.pluralsight.Order.regularToppings;
+import static com.pluralsight.Order.*;
 
 public class Sauce {
     private String name;
@@ -26,6 +26,9 @@ public class Sauce {
         for (String sauceName : sauces) {
             if (sauceChoice.equalsIgnoreCase(sauceName)) {
                 sauceCount++;
+                System.out.println("Current Sandwich: " + breadTypeAndSize);
+                System.out.println("Your Premium Toppings: " + premiumToppings);
+                System.out.println("Added Veggies: " + sauceName + " " + "x" + sauceCount);
                 return "Sauce: " + sauceName +  " " + "x" + sauceCount;
             }
         }
