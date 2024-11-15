@@ -54,4 +54,4 @@ Adrian San Miguel
 ## Links
 
 * [GitHub](https://github.com/asanmiguel12) 
-* [LinkedIn](https://www.linkedin.com/in/adrianchristiansanmiguel/).
+* [LinkedIn](https://www.linkedin.com/in/adrianchristiansanmiguel/)

@@ -22,7 +22,8 @@ public class Home {
                 exit();
                 break;
             default:
-                System.out.println("Please Input A Correct Choice");
+                System.out.println("Invalid Input Please Try Again");
+                homeMenu();
 
         }
     }
