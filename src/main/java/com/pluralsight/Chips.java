@@ -31,6 +31,8 @@ public class Chips {
                     return "Chips: " + chipsName + " " + "x" + chipsCount + " Price: $" + price;
                 }
             }
+            Order order = new Order();
+            order.orderMenu();
         }
         if (choice.equalsIgnoreCase("N")) {
             Order order = new Order();

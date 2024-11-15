@@ -46,10 +46,13 @@ public class Order {
         switch (choice) {
             case 1:
                  getSandwich();
+                 break;
             case 2:
-                return drink.getDrink();
+                 drink.getDrink();
+                 break;
             case 3:
                  chips.getChips();
+                 break;
             case 4:
                 checkout();
                 break;
@@ -96,7 +99,7 @@ public class Order {
                 breadTypeAndSize + "\n" +
                 premiumToppings + "\n" +
                 regularToppings);
-        
+
         System.out.println("Would You Like To Confirm Your Order? (Y/N)");
 
         String choice = scanner2.nextLine();
