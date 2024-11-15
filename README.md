@@ -5,12 +5,10 @@
 
 - [Overview](#Overview)
 - [Features](#features)
-- [Feedback](#feedback)
-- [Contributors](#contributors)
+- [Favorite Code Snippet](#favorite-code-snippet)
 - [Build Process](#build-process)
-- [Backers](#backers-)
-- [Sponsors](#sponsors-)
-- [Acknowledgments](#acknowledgments)
+- [Authors](#authors-)
+- [Links](#links)
 
 ## Overview
 
@@ -18,7 +16,7 @@
 
 ![DeliProjectFavCode](Images/OrderMenu.png)
 
-Streamlined and simple user interface allows user to easily navigate application menus
+## Streamlined and simple user interface allows user to easily navigate application menus
 
 ## Features
 
