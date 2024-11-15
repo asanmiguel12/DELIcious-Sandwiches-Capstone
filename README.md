@@ -31,8 +31,11 @@
 ## Favorite Code Snippet
 
 ![FavCode](Images/DeliProjectFavCode.png)
+![LiveCurrentSandwich](Images/Live%20Current%20Sandwich%20Prompt.png)
 
 For-Each loop utilized to iterate through long list of options instead of having an overly big amount of switch-cases
+
+Method that optimally prompts user of what is in their current sandwich to create a better user experience
 
 ## Build Process
 
