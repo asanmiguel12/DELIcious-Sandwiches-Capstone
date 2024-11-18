@@ -79,6 +79,12 @@ public class Sandwich {
                     breadTypeAndSize + "\n" +
                     premiumToppings + "\n");
         }
+    }
+
+    public static void currentSandwich () {
+        System.out.println("Current Sandwich: " + breadTypeAndSize);
+        System.out.println("Your Premium Toppings: " + premiumToppings);
+        System.out.println("Your Regular Toppings: " + regularToppings);
 
     }
 }
