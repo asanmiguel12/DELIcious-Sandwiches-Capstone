@@ -12,7 +12,7 @@ public class Bread {
     Scanner scanner1 = new Scanner(System.in);
     public String getBreadSize() {
         System.out.println("~BREAD SIZE~" + "\n" +
-                "What size regularToppings would you like" + "\n" +
+                "What Size Bread Would You Like?" + "\n" +
                 "1) 4 Inches Price: $5.50" + "\n" +
                 "2) 8 Inches Price: $7.00" + "\n" +
                 "3) 12 Inches Price: $8.50");

@@ -20,7 +20,7 @@ public class Sandwich {
         Toppings toppings = new Toppings();
 
         breadTypeAndSize.add(bread.getBreadSize());
-        System.out.println("Current Sandwich: " + breadTypeAndSize);
+        currentSandwich();
         breadTypeAndSize.add(bread.getBreadType());
         System.out.println("Current Sandwich: " + breadTypeAndSize);
         toppings.getPremiumToppings();
@@ -53,6 +53,7 @@ public class Sandwich {
     }
 
     Scanner scanner1 = new Scanner(System.in);
+
     public String addSandwich() {
 
         System.out.println("Would You Like To Add Another Sandwich? (Y/N)");
@@ -69,6 +70,7 @@ public class Sandwich {
     }
 
     Scanner scanner2 = new Scanner(System.in);
+
     public void isToasted() {
         System.out.println("Would You Like Your Sandwich Toasted? (Y/N)");
 
@@ -81,10 +83,15 @@ public class Sandwich {
         }
     }
 
-    public static void currentSandwich () {
-        System.out.println("Current Sandwich: " + breadTypeAndSize);
-        System.out.println("Your Premium Toppings: " + premiumToppings);
-        System.out.println("Your Regular Toppings: " + regularToppings);
-
+    public static void currentSandwich() {
+        if (!breadTypeAndSize.isEmpty()) {
+            System.out.println("Current Sandwich: " + breadTypeAndSize);
+        }
+        if (!premiumToppings.isEmpty()) {
+            System.out.println("Your Premium Toppings: " + premiumToppings);
+        }
+        if (!regularToppings.isEmpty()) {
+            System.out.println("Your Regular Toppings: " + regularToppings);
+        }
     }
 }

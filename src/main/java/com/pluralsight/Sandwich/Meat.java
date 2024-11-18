@@ -39,16 +39,14 @@ public class Meat{
         String choice = scanner1.nextLine();
         int extraMeatCount = 0;
 
-
         if (choice.equalsIgnoreCase("Y")) {
             extraMeatCount++;
-            System.out.println("Current Sandwich: " + breadTypeAndSize);
+            currentSandwich();
             System.out.println("Added Extra Meat: " + "x" + extraMeatCount);
             return "Extra Meat: " + "x" + extraMeatCount;
         }
         if (choice.equalsIgnoreCase("N")) {
-            System.out.println("Current Sandwich: " + breadTypeAndSize);
-            System.out.println("Your Premium Toppings: " + premiumToppings);
+            currentSandwich();
             toppings.getPremiumToppings();
         }
         scanner1.close();
