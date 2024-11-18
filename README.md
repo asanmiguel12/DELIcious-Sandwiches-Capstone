@@ -5,12 +5,10 @@
 
 - [Overview](#Overview)
 - [Features](#features)
-- [Feedback](#feedback)
-- [Contributors](#contributors)
+- [Favorite Code Snippet](#favorite-code-snippet)
 - [Build Process](#build-process)
-- [Backers](#backers-)
-- [Sponsors](#sponsors-)
-- [Acknowledgments](#acknowledgments)
+- [Authors](#authors-)
+- [Links](#links)
 
 ## Overview
 
@@ -18,7 +16,7 @@
 
 ![DeliProjectFavCode](Images/OrderMenu.png)
 
-Streamlined and simple user interface allows user to easily navigate application menus
+## Streamlined and simple user interface allows user to easily navigate application menus
 
 ## Features
 
@@ -33,8 +31,11 @@ Streamlined and simple user interface allows user to easily navigate application
 ## Favorite Code Snippet
 
 ![FavCode](Images/DeliProjectFavCode.png)
+![LiveCurrentSandwich](Images/Live%20Current%20Sandwich%20Prompt.png)
 
 For-Each loop utilized to iterate through long list of options instead of having an overly big amount of switch-cases
+
+Method that optimally prompts user of what is in their current sandwich to create a better user experience
 
 ## Build Process
 
@@ -43,7 +44,7 @@ For-Each loop utilized to iterate through long list of options instead of having
 - `yarn` to install dependencies
 - `yarn run link` to link react-native dependencies
 - `yarn start:ios` to start the packager and run the app in the iOS simulator (`yarn start:ios:logger` will boot the application with [redux-logger](<https://github.com/evgenyrodionov/redux-logger>))
-- `yarn start:android` to start the packager and run the app in the the Android device/emulator (`yarn start:android:logger` will boot the application with [redux-logger](https://github.com/evgenyrodionov/redux-logger))
+- `yarn start:android` to start the packager and run the app in the Android device/emulator (`yarn start:android:logger` will boot the application with [redux-logger](https://github.com/evgenyrodionov/redux-logger))
 
 
 ## Authors 
@@ -53,4 +54,4 @@ Adrian San Miguel
 ## Links
 
 * [GitHub](https://github.com/asanmiguel12) 
-* [LinkedIn](https://www.linkedin.com/in/adrianchristiansanmiguel/).
+* [LinkedIn](https://www.linkedin.com/in/adrianchristiansanmiguel/)

@@ -77,8 +77,7 @@ public class Sandwich {
             breadTypeAndSize.add("Toasted");
             System.out.println("Your DELIcious Sandwich:" + "\n" +
                     breadTypeAndSize + "\n" +
-                    premiumToppings + "\n" +
-                    regularToppings);
+                    premiumToppings + "\n");
         }
 
     }
