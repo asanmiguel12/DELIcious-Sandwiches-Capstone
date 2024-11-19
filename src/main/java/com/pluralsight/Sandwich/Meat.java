@@ -41,12 +41,12 @@ public class Meat{
 
         if (choice.equalsIgnoreCase("Y")) {
             extraMeatCount++;
-            currentSandwich();
+            displayCurrentSandwich();
             System.out.println("Added Extra Meat: " + "x" + extraMeatCount);
             return "Extra Meat: " + "x" + extraMeatCount;
         }
         if (choice.equalsIgnoreCase("N")) {
-            currentSandwich();
+            displayCurrentSandwich();
             toppings.getPremiumToppings();
         }
         scanner1.close();

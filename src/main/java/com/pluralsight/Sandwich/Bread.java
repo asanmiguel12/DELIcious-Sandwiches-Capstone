@@ -79,4 +79,8 @@ public class Bread {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public void setBreadSize(String breadSize) {
+        this.breadSize = breadSize;
+    }
 }

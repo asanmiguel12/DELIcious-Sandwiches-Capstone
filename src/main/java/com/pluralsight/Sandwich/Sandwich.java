@@ -20,9 +20,9 @@ public class Sandwich {
         Toppings toppings = new Toppings();
 
         breadTypeAndSize.add(bread.getBreadSize());
-        currentSandwich();
+        displayCurrentSandwich();
         breadTypeAndSize.add(bread.getBreadType());
-        System.out.println("Current Sandwich: " + breadTypeAndSize);
+        displayCurrentSandwich();
         toppings.getPremiumToppings();
         toppings.getRegularToppings();
         isToasted();
@@ -83,7 +83,7 @@ public class Sandwich {
         }
     }
 
-    public static void currentSandwich() {
+    public static void displayCurrentSandwich() {
         if (!breadTypeAndSize.isEmpty()) {
             System.out.println("Current Sandwich: " + breadTypeAndSize);
         }
