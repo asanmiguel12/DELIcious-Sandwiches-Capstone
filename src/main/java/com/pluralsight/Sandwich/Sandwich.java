@@ -40,9 +40,9 @@ public class Sandwich {
         Toppings toppings = new Toppings();
 
         breadTypeAndSize2.add(bread.getBreadSize());
-        System.out.println("Current Sandwich: " + breadTypeAndSize);
+        displayCurrentSandwich();
         breadTypeAndSize2.add(bread.getBreadType());
-        System.out.println("Current Sandwich: " + breadTypeAndSize);
+        displayCurrentSandwich();
         premiumToppings2.add(toppings.getPremiumToppings());
         regularToppings2.add(toppings.getRegularToppings());
 
@@ -77,9 +77,7 @@ public class Sandwich {
         String choice = scanner2.nextLine();
         if (choice.equalsIgnoreCase("Y")) {
             breadTypeAndSize.add("Toasted");
-            System.out.println("Your DELIcious Sandwich:" + "\n" +
-                    breadTypeAndSize + "\n" +
-                    premiumToppings + "\n");
+            displayCurrentSandwich();
         }
     }
 

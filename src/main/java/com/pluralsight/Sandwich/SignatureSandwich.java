@@ -1,10 +1,7 @@
 package com.pluralsight.Sandwich;
 
 import com.pluralsight.Order;
-
-import javax.xml.transform.Source;
 import java.util.Scanner;
-
 import static com.pluralsight.Sandwich.Sandwich.*;
 
 public class SignatureSandwich {

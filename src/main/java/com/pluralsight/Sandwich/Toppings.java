@@ -25,13 +25,13 @@ public class Toppings {
                     Meat meat = new Meat();
                     premiumToppings.add(meat.getMeat());
                     premiumToppings.add(meat.getExtraMeat());
-                    System.out.println("Your Premium Toppings: " + premiumToppings);
+                    displayCurrentSandwich();
                     getPremiumToppings();
                 case 2:
                     Cheese cheese = new Cheese();
                     premiumToppings.add(cheese.getCheese());
                     premiumToppings.add(cheese.getExtraCheese());
-                    System.out.println("Your Premium Toppings: " + premiumToppings);
+                    displayCurrentSandwich();
                     getPremiumToppings();
                 case 3:
                     Toppings toppings = new Toppings();
